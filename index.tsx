@@ -1,16 +1,9 @@
-"use client"
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+const [wins, setWins] = useState([]); // Сначала пустой массив
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Загружаем данные только ПОСЛЕ того, как компонент появился в браузере
+useEffect(() => {
+  const saved = localStorage.getItem('wins');
+  if (saved) {
+    setWins(JSON.parse(saved));
+  }
+}, []);
