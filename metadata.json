@@ -1,0 +1,5 @@
+{
+  "name": "Мои Победы (My Victories)",
+  "description": "A cyberpunk-styled personal achievement tracker with glassmorphism UI, local storage persistence, and motivational rewards.",
+  "requestFramePermissions": []
+}
